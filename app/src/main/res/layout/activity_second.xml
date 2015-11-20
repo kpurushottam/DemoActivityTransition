@@ -1,11 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Acivity Second"
@@ -14,16 +14,42 @@
 
     <Button
         android:id="@+id/btn_ok"
+        android:layout_below="@id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ok"
         android:layout_margin="10dp"/>
 
     <Button
+        android:id="@+id/btn_toggle"
+        android:layout_below="@id/btn_ok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Toggle Ok Button"
         android:layout_margin="10dp"
         android:onClick="toggleOkBtn"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_below="@id/btn_toggle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:text="Search"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_below="@id/btn_toggle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_search"
+        android:onClick="search"/>
+
+</RelativeLayout>
